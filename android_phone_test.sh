@@ -47,9 +47,10 @@ adb shell input tap 156 2310 #launch phone app
 sleep .2
 echo "Launching dialer."
 adb shell input tap 1185 2391 #launch dialer
-sleep .2
+sleep .5
 echo "Launching hwtest."
 adb shell input text "*#0*#"
+sleep .5
 
 echo -n "Testing screen "
 echo -n "red "
@@ -67,6 +68,8 @@ adb shell input tap 1180 180 #launch blue
 adb shell input keyevent KEYCODE_BACK
 adb shell input keyevent KEYCODE_BACK
 echo "done."
+
+sleep .5
 
 echo "Starting Cameratest."
 adb shell input tap 291 883 #start mega cam
